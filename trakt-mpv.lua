@@ -72,7 +72,7 @@ end
 
 -- Checkin Function
 local function checkin()
-    local status, output = evoque_python({"--query", mp.get_property('filename')})
+    local status, output = evoque_python({"--query", mp.get_property('media-title')})
 
     if status == 0 then
         send_message("Scrobbing " .. output, "00FF00", 2)
